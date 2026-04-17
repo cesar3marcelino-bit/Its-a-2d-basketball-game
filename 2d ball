@@ -245,6 +245,35 @@
             border: none;
             width: 100%;
         }
+
+#menu-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+
+.menu-box {
+    text-align: center;
+    color: white;
+}
+
+.menu-title {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+#moneyDisplay {
+    margin-top: 20px;
+    font-weight: bold;
+    color: var(--accent);
+}
+
     </style>
 </head>
 <body>
@@ -252,9 +281,15 @@
 <div id="game-wrapper">
     <canvas id="gameCanvas"></canvas>
     
-    <div id="start-overlay">
-        <div id="start-text">Tap to Play</div>
+    <div id="menu-screen">
+    <div class="menu-box">
+        <div class="menu-title">CITY HOOPS</div>
+        <button id="playBtn">PLAY</button>
+        <button id="storeBtn">STORE</button>
+        <button id="settingsBtn">SETTINGS</button>
+        <div id="moneyDisplay">💰 0</div>
     </div>
+</div>
 
     <!-- Music Modal -->
     <div id="music-modal">
